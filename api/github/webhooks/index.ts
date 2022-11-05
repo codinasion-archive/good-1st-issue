@@ -6,3 +6,5 @@ module.exports = createNodeMiddleware(app, {
     probot: createProbot(),
     webhooksPath: "/api/github/webhooks",
 });
+
+export { }
