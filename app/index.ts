@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 
 import { FormatToPascalCase } from "dummy-code"
 
-export = (app: Probot) => {
+const App = (app: Probot) => {
   app.log.info("Yay, the app was loaded !!!");
 
   // on issue labeled 'good first issue' or 'good-first-issue' or 'good_first_issue'
@@ -354,3 +354,5 @@ An issue got labeled with #${issue_label} for ${context.payload.repository.full_
   // To get your app running against GitHub, see:
   // https://probot.github.io/docs/development/
 };
+
+export default App;

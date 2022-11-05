@@ -1,5 +1,5 @@
 {
-  "name": "good-1st-issue-app",
+  "name": "good-1st-issue",
   "version": "0.0.0",
   "private": true,
   "description": "A Probot app to tweet good first issues",
@@ -12,21 +12,40 @@
     "twitter"
   ],
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && probot run ./lib/index.js",
-    "simulate": "tsc && sh simulate.sh",
-    "test": "jest"
+    "build-app": "tsc",
+    "start-app": "tsc && probot run ./lib/index.js",
+    "simulate-app": "tsc && sh simulate.sh",
+    "test": "jest",
+    "dev": "next dev",
+    "build": "next build",
+    "serve": "next start",
+    "lint": "next lint",
+    "build-all": "tsc && next build"
   },
   "dependencies": {
+    "@emotion/cache": "^11.7.1",
+    "@emotion/react": "^11.9.0",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.8.1",
+    "@fontsource/roboto": "^4.5.5",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/lab": "^5.0.0-alpha.97",
+    "@mui/material": "^5.10.3",
+    "@mui/styles": "^5.7.0",
     "dummy-code": "^0.1.2",
+    "next": "12.2.5",
     "node-fetch": "2.6.7",
-    "probot": "^12.2.4"
+    "probot": "^12.2.4",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^18.0.0",
     "@types/node-fetch": "^2.6.2",
     "@types/pino-std-serializers": "^4.0.0",
+    "eslint": "^8.26.0",
     "jest": "^29.0.0",
     "nock": "^13.0.5",
     "smee-client": "^1.2.2",
@@ -35,5 +54,8 @@
   },
   "engines": {
     "node": ">= 10.13.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
