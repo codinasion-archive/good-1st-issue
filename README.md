@@ -1,6 +1,6 @@
 <h1 align="center">
-    <a href="https://www.npmjs.com/package/dummy-code">
-        <img src="public/LOGO.png" alt="Dummy Code" width="100" />
+    <a href="https://github.com/codinasion/good-1st-issue">
+        <img src="public/LOGO.png" alt="Good1stIssue" width="100" />
     </a>
     <br>
     Good 1st Issue
