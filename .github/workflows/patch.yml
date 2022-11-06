@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: PATCH
         run: |
-          curl -X PATCH -H "Authorization: Token ${{ secrets.BACKEND_URL_TOKEN }}" -H "Content-Type: application/json" ${{ secrets.BACKEND_URL }}
+          curl -X PATCH -H "Authorization: Token ${{ secrets.BACKEND_URL_TOKEN }}" -H "Content-Type: application/json" ${{ secrets.BACKEND_URL }}/good1stissue/
