@@ -85,3 +85,7 @@ message = client.create_tweet(text="Hello World !!!")
 ## Contributing
 
 If you want to contribute to this project, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## Basic Workflow
+
+You can find the basic workflow of the project in the [WORKFLOW.md](WORKFLOW.md) file.
