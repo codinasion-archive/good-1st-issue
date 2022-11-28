@@ -60,7 +60,8 @@ class ServerUpdateView(APIView):
                 try:
                     # Perform git pull
                     repo = git.Repo(
-                        os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                        search_parent_directories=True,
                     )
                     origin = repo.remotes.origin
                     origin.pull()
