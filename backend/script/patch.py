@@ -5,7 +5,7 @@ import sys
 
 # get arguments
 BACKEND_URL = sys.argv[1]
-BBACKEND_ACCESS_TOKEN = sys.argv[2]
+BACKEND_ACCESS_TOKEN = sys.argv[2]
 
 
 def PATCH():
