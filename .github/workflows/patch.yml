@@ -1,0 +1,38 @@
+# This worflow triggers the tweet api for already scheduled tweets
+name: Auto PATCH
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  auto_create_issue:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/good-1st-issue'
+    runs-on: ubuntu-latest
+    timeout-minutes: 1380
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache PIP packages
+        id: cache-pip-packages
+        uses: actions/cache@v2
+        with:
+          path: backend/.venv
+          key: pip-packages-${{ hashFiles('backend/requirements.txt') }}
+
+      - name: Install PIP packages
+        if: steps.cache-pip-packages.outputs.cache-hit != 'true'
+        run: |
+          cd backend
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: PATCH
+        run: |
+          cd backend
+          source .venv/bin/activate
+          python3 scripts/patch.py ${{ secrets.BACKEND_URL }} ${{ secrets.BACKEND_URL_TOKEN }}
