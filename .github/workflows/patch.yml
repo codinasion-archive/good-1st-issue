@@ -4,13 +4,16 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   auto_create_issue:
     # run only if repo is not a fork
     if: github.repository == 'codinasion/good-1st-issue'
     runs-on: ubuntu-latest
-    timeout-minutes: 1380
+    timeout-minutes: 1440
 
     steps:
       - name: Checkout
@@ -31,8 +34,8 @@ jobs:
           source .venv/bin/activate
           pip install -r requirements.txt
 
-      # - name: PATCH
-      #   run: |
-      #     cd backend
-      #     source .venv/bin/activate
-      #     python3 script/patch.py ${{ secrets.BACKEND_URL }} ${{ secrets.BACKEND_URL_TOKEN }}
+      - name: PATCH
+        run: |
+          cd backend
+          source .venv/bin/activate
+          python3 script/patch.py ${{ secrets.BACKEND_URL }} ${{ secrets.BACKEND_URL_TOKEN }}
