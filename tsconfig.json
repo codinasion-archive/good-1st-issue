@@ -19,7 +19,7 @@
     // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                     /* Enable project compilation */
     // "tsBuildInfoFile": "./" /* Specify file to store incremental compilation information */,
-    "removeComments": true, /* Do not emit comments to output. */// "noEmit": true,                        /* Do not emit outputs. */
+    "removeComments": true /* Do not emit comments to output. */, // "noEmit": true,                        /* Do not emit outputs. */
     // "importHelpers": true,                 /* Import emit helpers from 'tslib'. */
     // "downlevelIteration": true,            /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
     // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
@@ -42,30 +42,16 @@
     "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
     "paths": {
       // data
-      "@/data/*": [
-        "data/*"
-      ],
+      "@/data/*": ["data/*"],
       // public
-      "@/public/*": [
-        "public/*"
-      ],
+      "@/public/*": ["public/*"],
       // src
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/layouts/*": [
-        "src/layouts/*"
-      ],
-      "@/themes/*": [
-        "src/themes/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
+      "@/components/*": ["src/components/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/themes/*": ["src/themes/*"],
+      "@/utils/*": ["src/utils/*"],
       // styles
-      "@/styles/*": [
-        "styles/*"
-      ]
+      "@/styles/*": ["styles/*"]
     } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
@@ -91,11 +77,7 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": [
-    "app/"
-  ],
+  "include": ["app/"],
   "compileOnSave": false,
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules", "backend"]
 }
