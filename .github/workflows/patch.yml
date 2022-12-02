@@ -19,15 +19,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Cache PIP packages
-        id: cache-pip-packages
-        uses: actions/cache@v2
-        with:
-          path: backend/.venv
-          key: pip-packages-${{ hashFiles('backend/requirements.txt') }}
+#       - name: Cache PIP packages
+#         id: cache-pip-packages
+#         uses: actions/cache@v2
+#         with:
+#           path: backend/.venv
+#           key: pip-packages-${{ hashFiles('backend/requirements.txt') }}
 
       - name: Install PIP packages
-        if: steps.cache-pip-packages.outputs.cache-hit != 'true'
+#         if: steps.cache-pip-packages.outputs.cache-hit != 'true'
         run: |
           cd backend
           python -m venv .venv
