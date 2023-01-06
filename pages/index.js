@@ -190,7 +190,7 @@ export default function Home({ goodFirstIssueData }) {
               >
                 <b>Support this project by starring it on GitHub.</b>
               </Typography>
-              <Link href="https://github.com/codinasion/good-1st-issue">
+              <Link href="https://github.com/x4ty/good-1st-issue">
                 <Button
                   variant="outlined"
                   color="success"

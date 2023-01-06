@@ -1,5 +1,5 @@
 <h1 align="center">
-    <a href="https://github.com/codinasion/good-1st-issue">
+    <a href="https://github.com/x4ty/good-1st-issue">
         <img src="public/LOGO.png" alt="Good1stIssue" width="100" />
     </a>
     <br>
