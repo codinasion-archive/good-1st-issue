@@ -11,7 +11,7 @@ concurrency:
 jobs:
   auto_create_issue:
     # run only if repo is not a fork
-    if: github.repository == 'x4ty/good-1st-issue'
+    if: github.repository == 'codinasion/good-1st-issue'
     runs-on: ubuntu-latest
     # timeout-minutes: 1440 (doesn't work, default is 360)
 

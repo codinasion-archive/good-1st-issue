@@ -5,8 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        * For questions, ask in [Discussions](https://github.com/x4ty/good-1st-issue/discussions).
-        * Check to make sure someone hasn't already opened a similar [issue](https://github.com/x4ty/good-1st-issue/issues).
+        * For questions, ask in [Discussions](https://github.com/codinasion/good-1st-issue/discussions).
+        * Check to make sure someone hasn't already opened a similar [issue](https://github.com/codinasion/good-1st-issue/issues).
 
   - type: textarea
     id: description
