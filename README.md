@@ -45,7 +45,7 @@ You can install the Github App on your repository by [clicking here](https://git
 
 > **Note** The Github App will ask for `Read` access to your repository. This is needed to read the issues (and labels) of your repository.
 
-The Issues will be autometically `deleted` from the website and Twitter Bot when the issue is `closed` / `deleted` / `unlabeled` / `assigned` to ensure that the website and Twitter Bot **only show issues that are still open for contribution**.
+The Issues will be automatically `deleted` from the website and Twitter Bot when the issue is `closed` / `deleted` / `unlabeled` / `assigned` to ensure that the website and Twitter Bot **only show issues that are still open for contribution**.
 
 The Source Code of the Github App is available  in [`app/index.ts`](app/index.ts)
 
